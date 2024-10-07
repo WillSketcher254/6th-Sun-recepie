@@ -62,17 +62,13 @@ function details(id) {
                 `
             detailsDiv.innerHTML = detailsInfo;
             details.appendChild(detailsDiv)
-            // Move the adding event listener here
-            let adding = document.querySelector('.plus');
-            if (adding) { // Check if the plus button exists
-                adding.onclick = () => {
-                    let savedMeals = JSON.parse(localStorage.getItem('savedMeals')) || [];
-                    savedMeals.push(detailsInfo); // Use the current detailsInfo
-                    localStorage.setItem('savedMeals', JSON.stringify(savedMeals));
-                    console.log('Meal added to saved meals:', detailsInfo);
-                };
-            }
 
+            let adding = document.querySelector('.plus');
+            
+            adding.addEventListener('click', () => {
+                localStorage.setItem('savedMeal', detailsInfo);
+            });
+            
         })
         .catch(err => console.error('Error fetching meal details:', err));
 }
