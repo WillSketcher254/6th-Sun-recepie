@@ -50,3 +50,24 @@ h1{
     cursor: pointer;
     border-radius: 20px;
 }
+.mybook a{
+    text-decoration: none;
+    color: rgb(138, 115, 0);
+}
+.mybook a:hover{
+    color: rgb(255, 255, 255);
+}
+.mybook button{
+    color: rgb(138, 115, 0);
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    outline: none;
+    background: rgb(156, 255, 252);
+    border-radius: 30px;
+    font-size: 20px;
+}
+.mybook button:hover{
+    background: rgb(47, 151, 81);
+    color: white;
+}
