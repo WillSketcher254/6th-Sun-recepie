@@ -65,10 +65,18 @@ function details(id) {
 
             let adding = document.querySelector('.plus');
             
+            
             adding.addEventListener('click', () => {
-                localStorage.setItem('savedMeal', detailsInfo);
+                addFood(detailsInfo)
             });
             
         })
         .catch(err => console.error('Error fetching meal details:', err));
+}
+
+
+function addFood(detailsInfo){
+    // detailsInfo = detailsInfo + detailsInfo
+    alert('Meal has been')
+    localStorage.setItem('savedMeal', detailsInfo);
 }
